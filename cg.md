@@ -3,7 +3,7 @@
 Режим LAB основан на человеческом восприятии цвета в зависимости от других цветов, окружающих его
 
 `L - Lightness (Яркость), A - зелено-пурпурный канал и B - сине-желтый канал`
-![](https://asihsuryani.com/app/uploads/2019/08/Color-Graph.png)
+
 <img src="https://asihsuryani.com/app/uploads/2019/08/Color-Graph.png" width="450px" height="450px">
 # 2. Допечатная подготовка
 ## Работа в CMYK
