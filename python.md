@@ -96,3 +96,82 @@ gender_dict = {0: 'муж',
 Логический тип данных, который может содержать значения `True` или `False`
 ## 1.8 None
 Этот тип используется для обозначения отсутствия значения
+# 2. Работа с файлами
+Файл – это именованная область диска, предназначенная для длительного хранения данных в постоянной памяти
+## Открытие open()
+``` python
+>>> f = open("test.txt")    # открыть файл в текущей папке
+>>> f = open("C:/Python33/README.txt")  # указание полного пути
+```
+* ‘r’- для чтения
+* ’w’  — для перезаписи
+* ’a’ — для изменения
+* ‘x’ - открытие для записи
+``` python
+f = open("test.txt")      # эквивалент 'r' или 'rt'
+f = open("test.txt",'w')  # запись в текстовом режиме
+f = open("img.bmp",'r+b') # чтение и запись в бинарном формате
+```
+## Закрытие close()
+```python
+f = open("test.txt",encoding = 'utf-8')
+# выполнение операций с файлом
+f.close()
+```
+Закрытие файла с блоком `try - finally`, предусматривающее исключения:
+```python
+try:
+   f = open("test.txt",encoding = 'utf-8')
+   # выполнение операций с файлом
+finally:
+   f.close() 
+```
+Конструкция `with`, файл будет закрыт при выходе из конструкции:
+```python
+with open("test.txt",encoding = 'utf-8') as f:
+   # выполнение операций с файлом
+```
+## Запись строки write()
+Возвращает количество символов, записанных в файл
+```python
+with open("test.txt",'w',encoding = 'utf-8') as f:
+   f.write("my first filen")
+   f.write("This filenn")
+   f.write("contains three linesn"
+```
+## Чтение read() seek() tell() readline() readlines()
+read() - чтение данных в указанном количестве
+```python
+>>> f = open("test.txt",'r',encoding = 'utf-8')
+>>> f.read(4)    # чтение первых 4 символов
+'This'
+ 
+>>> f.read(4)    # чтение следующих 4 символов
+' is '
+ 
+>>> f.read()     # чтение остальных данных до конца файла
+'my first file This file contains three linesn'
+```
+tell() - возвращение позиции курсора в виде к-ва байтов
+seek() - изменение текущей позиции курсора
+readline() - извлечение отдельной строки, читает файл до символа новой стр
+readlines() возвращает список оставшихся строк
+```python
+>>> f.tell()    # получаем текущую позицию курсора в файле
+56
+ 
+>>> f.seek(0)   # возвращаем курсор в начальную позицию
+0
+ 
+>>> print(f.read())  # читаем весь файл
+This is my first file
+This file
+contains three lines
+
+>>> f.readlines()
+['This is my first filen', 'This filen', 'contains three linesn']
+```
+ При работе с файлами в текстовом формате рекомендуется указывать тип кодировки
+ ```python
+f = open("test.txt",mode = 'r',encoding = 'utf-8'  
+```
