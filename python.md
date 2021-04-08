@@ -175,3 +175,5 @@ contains three lines
  ```python
 f = open("test.txt",mode = 'r',encoding = 'utf-8'  
 ```
+
+# 2. Стек / Stack
