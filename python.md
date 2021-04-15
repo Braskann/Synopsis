@@ -229,3 +229,8 @@ print('ShortInputException: Длина введённой строки -- {0}; \
 else:
 print('Не было исключений.')
 ```
+```python
+Вывод:
+$ python3 raising.py
+Введите что-нибудь --> а
+ShortInputException: Длина введённой строки -- 1; ожидалось, как минимум, 3
