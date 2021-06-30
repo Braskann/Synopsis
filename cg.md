@@ -4,6 +4,7 @@
 
 `L - Lightness (Яркость), A - зелено-пурпурный канал и B - сине-желтый канал`
 <img src="imgCG/Color-Graph.png" width="450px" height="450px">
+ 
 </details>
 # Допечатная подготовка <details>
 ## Основные требования
