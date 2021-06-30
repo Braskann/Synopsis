@@ -9,7 +9,9 @@
 <img src="imgCG/Color-Graph.png" width="450px" height="450px">
  
 </details>
+
 # Допечатная подготовка 
+
 <details>
 ## Основные требования
 1. __Форматы:__ .tiff, .ai, .eps, .indd, .pdf, .psd
